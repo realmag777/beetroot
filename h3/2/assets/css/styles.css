@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(153, 9, 9);
+    font-family: 'Times New Roman';
+    color: #fff;
+    font-size: 18px;
+}
+
+#site{
+    width: 100%;    
+}
+
+.site-wrapper{
+    padding-left: 0;
+    border-left: solid 8px rgb(153, 9, 9);
+}
+
+.site-wrapper > header{
+    text-align: center;
+}
+
+#menu-top{
+    background-color: #000;
+    padding: 23px 0 3px 0;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+#menu-top figure{
+    display: inline-block;
+    margin-right: 88px;    
+}
+
+#menu-top a:last-child figure{
+    margin-right: 0;
+}
+
+#menu-top img{
+    width: 153px;
+}
+
+#menu-top img:hover{
+    filter: blur(1px);
+}
+
+#menu-top a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu-top a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
+/************************* content part *******************************/
+
+main{
+    border-right: solid 3px rgb(153, 9, 9);
+}
+
+main > *{
+    display: inline-block;
+    vertical-align: top;
+}
+
+main > article{
+    width: 50%;
+    padding-top: 21px;
+    font-size: 0.8em;
+    line-height: 20px;
+    font-family: verdana;
+}
+   
+main > article p{
+       margin-bottom: 9px;
+   }
+   
+
+main > aside{
+    width: 24%;
+    background-color: rgb(125, 9, 9);
+    padding: 3px;
+}
+
+main > aside ul{
+    list-style: none;
+}
+
+main > aside li{
+    margin-bottom: 15px;
+}
+
+main > aside a{
+    color: rgb(226, 44, 10);
+    text-decoration: underline;
+}
+
+main > aside a:hover{
+    text-decoration: none;
+}
+
+
+
+
+main > aside:nth-child(3){
+    background-color:rgb(227, 221, 221);
+    padding: 1px;
+    color: #000;
+}
+
+main > aside:nth-child(3) > header{
+    background-color:rgb(189, 189, 189);
+    text-align: center;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+main > aside:nth-child(3) p{
+    margin-bottom: 25px;
+}
+
+main > aside:nth-child(3) p:before{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 8px 0 14px 0;    
+    margin-left: auto;
+    margin-right: auto;
+    content: '';
+    border-top: solid 1px rgb(154, 154, 154);
+    border-bottom: solid 1px rgb(238, 238, 238);   
+}
+
+
+.site-wrapper > footer{
+    background-color:rgb(233, 91, 17);
+    border-right: solid 3px rgb(153, 9, 9);
+    height: auto;
+    line-height: 21px;
+    margin: 31px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+}
