@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #3b3f45;
+    font-family: 'Arial';
+    font-size: 16px;
+    color: #fff;
+}
+
+todo {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    border: 23px solid #fff;
+}
+
+todo>header {
+    background-color: #4a4f56;
+    text-align: center;
+    color: #eb7e7f;
+    padding: 16px 0;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+todo>header h3 {
+    font-weight: normal;
+}
+
+main {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+article {
+    background-color: #7a7593;
+}
+
+#tasks {
+    transition: all 0.1s ease;
+}
+
+#tasks li {
+    padding: 0;
+    vertical-align: middle;
+    line-height: 0;
+    font-size: 1.4rem;
+}
+
+#tasks li label {
+    display: block;
+    padding: 15px 23px;
+    border-top: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+}
+
+#tasks li label span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -7px;
+}
+
+#tasks li small {
+    font-size: 0.9rem;
+    color: #ddd;
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -4px;
+}
+
+#tasks li small::before {
+    position: absolute;
+    content: '(';
+    left: -8px;
+}
+
+#tasks li small::after {
+    position: absolute;
+    content: ')';
+    right: -8px;
+}
+
+#tasks li label:hover {
+    background-color: #625e77;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    box-sizing: border-box;
+}
+
+#tasks li:nth-child(2n+1) {
+    background-color: #88839e;
+}
+
+#tasks li input[type=checkbox] {
+    height: 25px;
+    width: 25px;
+    border: solid 1px #000;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+#tasks li input[type=checkbox]:checked {
+    appearance: none;
+    background: #fff;
+    outline: none;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#tasks li input[type=checkbox]:checked:before {
+    position: absolute;
+    left: 2px;
+    top: -7px;
+    display: block;
+    content: '\2713';
+    font-weight: bold;
+    text-align: center;
+    color: #424242;
+    font-family: Arial;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+#tasks li input[type=checkbox]:checked~* {
+    text-decoration: line-through;
+}
+
+main>footer {
+    color: #eb7e7f;
+    background-color: #4a4f56;
+    margin: 30px 0;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 1.2rem;
+}
