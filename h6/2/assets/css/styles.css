@@ -47,7 +47,7 @@ article {
 }
 
 #tasks {
-    transition: all 0.1s ease;
+    transition: all .1s ease-in;
 }
 
 #tasks li {
@@ -97,6 +97,7 @@ article {
     border-top: solid 2px #fff;
     border-bottom: solid 2px #fff;
     box-sizing: border-box;
+    transition: background-color .4s ease;
 }
 
 #tasks li:nth-child(2n+1) {
