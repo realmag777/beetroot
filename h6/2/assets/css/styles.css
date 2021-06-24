@@ -67,7 +67,7 @@ article {
 #tasks li label span {
     display: inline-block;
     vertical-align: middle;
-    margin-top: -7px;
+    margin-top: -9px;
 }
 
 #tasks li small {
@@ -77,7 +77,7 @@ article {
     margin-left: 15px;
     vertical-align: middle;
     position: relative;
-    margin-top: -4px;
+    margin-top: -6px;
 }
 
 #tasks li small::before {
