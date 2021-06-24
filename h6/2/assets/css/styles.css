@@ -53,13 +53,12 @@ article {
 #tasks li {
     padding: 0;
     vertical-align: middle;
-    line-height: 0;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 #tasks li label {
     display: block;
-    padding: 15px 23px;
+    padding: 11px 23px 7px 23px;
     border-top: solid 2px transparent;
     border-bottom: solid 2px transparent;
 }
