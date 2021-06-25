@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #3399cc;
+    font-family: 'Lucida Sans Unicode';
+    font-size: 14px;
+    color: #fff;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+main>header h1 {
+    font-size: 1.2em;
+    line-height: 3.4em;
+}
+
+article {
+    background: #fff;
+    border-right: solid 5px #fff;
+    border-bottom: solid 5px #fff;
+}
+
+#weather {
+    transition: all .1s ease-in;
+}
+
+#weather li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25%;
+    height: 112px;
+    border-top: solid 5px #fff;
+    border-left: solid 5px #fff;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#weather li:hover {
+    opacity: 0.8;
+    transition: .25s ease-in;
+    cursor: pointer;
+    color: orangered;
+    background: repeating-linear-gradient( 135deg, cornflowerblue, cornflowerblue 10px, wheat 10px, wheat 20px);
+}
+
+#weather li span {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    top: 30%;
+    min-width: 120px;
+}
+
+#weather li:hover span {
+    top: 16%;
+    font-size: 1.3em;
+    transition: .15s ease-in;
+    text-shadow: 2px 2px 5px #996699;
+    min-width: 200px;
+    font-weight: bold;
+}
+
+#weather li>span::after {
+    position: absolute;
+    font-family: weathericons;
+    content: attr(data-temp) '°C';
+    opacity: 0.8;
+    left: 30%;
+    bottom: -100%;
+    word-spacing: 10px;
+    white-space: nowrap;
+    transition: .15s ease-in;
+}
+
+#weather li>span i {
+    font-family: weathericons;
+    position: absolute;
+    right: 19%;
+    bottom: -112%;
+    opacity: 0.8;
+    font-style: normal;
+    font-size: 1.2em;
+    transition: .25s ease-in;
+}
+
+[data-bg-color='1'] {
+    background-color: #3399cc;
+}
+
+[data-bg-color='2'] {
+    background-color: #33cccc;
+}
+
+[data-bg-color='3'] {
+    background-color: #996699;
+}
+
+[data-bg-color='4'] {
+    background-color: #c24747;
+}
+
+[data-bg-color='5'] {
+    background-color: #e2674a;
+}
+
+[data-bg-color='6'] {
+    background-color: #ffcc66;
+}
+
+[data-bg-color='7'] {
+    background-color: #99cc99;
+}
+
+[data-bg-color='8'] {
+    background-color: #669999;
+}
+
+[data-bg-color='9'] {
+    background-color: #cc6699;
+}
+
+[data-bg-color='10'] {
+    background-color: #339966;
+}
+
+[data-bg-color='11'] {
+    background-color: #666699;
+}
+
+.col2x {
+    width: 50% !important;
+}
+
+.col4x {
+    width: 100% !important;
+}
+
+main>footer {
+    color: #fff;
+    text-align: left;
+    padding: 16px 0;
+    font-size: 1rem;
+}
