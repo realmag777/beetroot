@@ -74,7 +74,6 @@ article {
 
 #weather li>span::after {
     position: absolute;
-    font-family: weathericons;
     content: attr(data-temp) '°C';
     opacity: 0.8;
     left: 30%;
