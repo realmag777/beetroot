@@ -36,6 +36,11 @@ article {
     transition: all .1s ease-in;
 }
 
+#weather:hover li {
+    opacity: 0.6;
+    transition: .45s ease-in;
+}
+
 #weather li {
     display: inline-block;
     vertical-align: middle;
@@ -53,6 +58,10 @@ article {
     cursor: pointer;
     color: orangered;
     background: repeating-linear-gradient( 135deg, cornflowerblue, cornflowerblue 10px, wheat 10px, wheat 20px);
+}
+
+#weather li:hover+li {
+    opacity: 0.3;
 }
 
 #weather li span {
