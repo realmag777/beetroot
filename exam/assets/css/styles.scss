@@ -2,6 +2,12 @@
 $max_width: 1800px;
 $color_blue: #5474fd;
 $color_blue2: #496bfe;
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -86,9 +92,7 @@ header.header {
     background-size: cover;
     height: 739px;
     padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
     align-items: center;
     text-align: center;
 }
@@ -212,9 +216,7 @@ header.header hgroup {
 .menu__logo {
     font-size: 24px;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
     font-weight: 600;
     padding-left: 15px;
 }
@@ -386,9 +388,7 @@ section.process {
         width: 32%;
         fill: #fff;
         color: #d6d6d6;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex;
         align-items: center;
         position: relative;
     }
@@ -619,9 +619,7 @@ footer.footer {
     background: #232323;
     height: 267px;
     padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex;
     align-items: center;
     &>* {
         display: block;
