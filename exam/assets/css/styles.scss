@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&display=swap');
+$max_width: 1800px;
+$color_blue: #5474fd;
+$color_blue2: #496bfe;
 * {
     padding: 0;
     margin: 0;
@@ -19,14 +22,14 @@ ul {
 
 ::selection {
     background: rgba(147, 185, 212, 0.9);
-    color: #ffffff;
+    color: #fff;
 }
 
 .site {
-    width: 90%;
-    max-width: 1800px;
-    margin: 40px auto;
-    border: solid 15px #fff;
+    width: 100%;
+    max-width: $max_width;
+    margin: 0 auto;
+    border: solid 10px #fff;
 }
 
 @media screen and (max-width: 900px) {
@@ -39,7 +42,7 @@ ul {
 
 .btn {
     display: inline-block;
-    background-color: #496bfe;
+    background-color: $color_blue2;
     padding: 21px 32px 20px 32px;
     border: none;
     color: #fff;
@@ -58,8 +61,7 @@ ul {
     content: '';
     width: 100%;
     height: 100%;
-    height: 100%;
-    background-color: #5474fd;
+    background-color: $color_blue;
     position: absolute;
     margin: 0;
     padding: 0;
@@ -70,11 +72,11 @@ ul {
 }
 
 .btn:hover {
-    background-color: #5474fd;
+    background-color: $color_blue;
 }
 
 .btn:hover::before {
-    background-color: #496bfe;
+    background-color: $color_blue2;
     opacity: 0.95;
 }
 
@@ -174,7 +176,7 @@ header.header hgroup {
 }
 
 .menu {
-    background-color: #5474fd;
+    background-color: $color_blue;
     width: 100%;
     margin-top: auto;
 }
@@ -254,7 +256,7 @@ header.header hgroup {
         display: block;
         position: absolute;
         width: 100%;
-        background-color: #5474fd;
+        background-color: $color_blue;
         top: 79px;
         z-index: 999;
     }
@@ -411,7 +413,7 @@ section.process {
         animation: anim0 3s infinite;
     }
     & .col:first-child svg {
-        fill: #5474fd;
+        fill: $color_blue;
         animation: anim1 3s infinite;
     }
     & .col:nth-child(2) svg {
@@ -493,7 +495,7 @@ section.process {
 @media screen and (max-width: 600px) {
     section.process {
         & h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
 }
@@ -582,7 +584,7 @@ section.section-reviews {
     & p::before {
         content: '‟';
         margin: 19px 12px 0 0;
-        color: #5474fd;
+        color: $color_blue;
         font-weight: bold;
         font-size: 2.5rem;
         line-height: 2rem;

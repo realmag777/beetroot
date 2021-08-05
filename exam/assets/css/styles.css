@@ -20,19 +20,19 @@ ul {
 
 ::-moz-selection {
   background: rgba(147, 185, 212, 0.9);
-  color: #ffffff;
+  color: #fff;
 }
 
 ::selection {
   background: rgba(147, 185, 212, 0.9);
-  color: #ffffff;
+  color: #fff;
 }
 
 .site {
-  width: 90%;
+  width: 100%;
   max-width: 1800px;
-  margin: 40px auto;
-  border: solid 15px #fff;
+  margin: 0 auto;
+  border: solid 10px #fff;
 }
 
 @media screen and (max-width: 900px) {
@@ -63,7 +63,6 @@ ul {
 .btn::before {
   content: "";
   width: 100%;
-  height: 100%;
   height: 100%;
   background-color: #5474fd;
   position: absolute;
@@ -631,7 +630,7 @@ section.process .col:last-child svg {
 }
 @media screen and (max-width: 600px) {
   section.process h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 /*******************************************************/
