@@ -378,6 +378,7 @@ section.process {
     & h3 {
         margin-bottom: 0;
         font-size: 1.6rem;
+        z-index: 3;
     }
     & .col {
         width: 32%;
@@ -416,10 +417,14 @@ section.process {
     & .col:nth-child(2) svg {
         fill: #ff6363;
         animation: anim2 1s infinite;
+        background: #333;
+        z-index: 1;
     }
     & .col:last-child svg {
         fill: #00a2ff;
         animation: anim3 2s infinite;
+        background: #333;
+        z-index: 1;
     }
 }
 

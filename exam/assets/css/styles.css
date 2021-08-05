@@ -455,6 +455,7 @@ section.process {
 section.process h3 {
   margin-bottom: 0;
   font-size: 1.6rem;
+  z-index: 3;
 }
 section.process .col {
   width: 32%;
@@ -503,11 +504,15 @@ section.process .col:nth-child(2) svg {
   fill: #ff6363;
   -webkit-animation: anim2 1s infinite;
           animation: anim2 1s infinite;
+  background: #333;
+  z-index: 1;
 }
 section.process .col:last-child svg {
   fill: #00a2ff;
   -webkit-animation: anim3 2s infinite;
           animation: anim3 2s infinite;
+  background: #333;
+  z-index: 1;
 }
 
 @-webkit-keyframes anim0 {
