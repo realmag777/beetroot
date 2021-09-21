@@ -190,7 +190,6 @@ body > header {
   border-radius: 100%;
   border: solid 1px #fff;
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 15px;
@@ -351,7 +350,7 @@ main section article {
   margin-bottom: 200px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   section#about {
     margin-bottom: 50px;
   }
@@ -611,6 +610,19 @@ section#gallery .btn {
 
   .woot-gallery > div.woot-gallery-nav > img {
     width: 90%;
+  }
+
+  .woot-gallery .woot-gallery-nav {
+    width: 165px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #gallery .gallery .col:first-child {
+    display: none;
+  }
+
+  .woot-gallery .woot-gallery-nav {
+    width: 245px;
   }
 }
 /*********************************************************/
