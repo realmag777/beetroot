@@ -481,7 +481,7 @@ section.news h2::before {
   }
 
   .news .news-slider-nav {
-    left: 10%;
+    left: 0;
     bottom: 20px;
   }
 
