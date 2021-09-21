@@ -1,11 +1,19 @@
 var menu_timer = null;
 
-
-
 window.addEventListener('load', function() {
     setInterval(function() {
         next_slider();
     }, 4000);
+
+    let news_slider = new NewsSlider('news_slider_1');
+    setInterval(function() {
+        news_slider.slide();
+    }, 4000);
+
+    //to avoid waitng google map loading delay
+    setTimeout(function() {
+        initMap();
+    }, 2000);
 
     //+++
     //nav scrolling
@@ -148,17 +156,6 @@ window.addEventListener('load', function() {
     //+++
 
     generate_popup_gallery();
-
-
-    let news_slider = new NewsSlider('news_slider_1');
-    setInterval(function() {
-        news_slider.slide();
-    }, 4000);
-
-    //to avoid waitng google map loading delay
-    setTimeout(function() {
-        initMap();
-    }, 2000);
 
 });
 

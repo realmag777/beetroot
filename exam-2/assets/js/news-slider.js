@@ -1,3 +1,4 @@
+//news slider block slider
 class NewsSlider {
     constructor(id) {
         this.id = id;

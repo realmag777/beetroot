@@ -1,3 +1,4 @@
+ //wrap to class on optimization
  var offset = 0;
  var slider_num = 0;
  var count_slides = document.querySelectorAll('ul.pureslider > li').length;

@@ -96,37 +96,7 @@ class Popup23 {
         }
 
         if (typeof data.action !== 'undefined' && data.action.length > 0) {
-            document.dispatchEvent(new CustomEvent(data.action, {detail: {...data, ... {popup: this}}}));
-        }
-
-
-        //***
-
-        if (typeof data.shortcodes_set !== 'undefined' && data.shortcodes_set) {
-            fetch(woot_helper_vars.ajax_url, {
-                method: 'POST',
-                credentials: 'same-origin',
-                body: woot_helper.prepare_ajax_form_data({
-                    action: 'woot_get_smth',
-                    what: 'shortcodes_set',
-                    shortcodes_set: data.shortcodes_set,
-                    lang: woot_helper_vars.selected_lang
-                })
-            }).then((response) => response.text()).then((content) => {
-                this.set_content(content);
-
-                /*
-                 this.shortcodes_set_interval = setInterval(() => {
-                 if (this.node.querySelector('.woot-table')) {
-                 this.node.querySelector('.woot-tables-set a').dispatchEvent(new Event('click'));
-                 clearInterval(this.shortcodes_set_interval);
-                 }
-                 }, 999);
-                 */
-
-            }).catch((err) => {
-                woot_helper.message(err, 'error', 5000);
-            });
+            document.dispatchEvent(new CustomEvent(data.action, { detail: {...data, ... { popup: this } } }));
         }
 
         //***
@@ -183,7 +153,7 @@ class Popup23 {
 
     set_content(content) {
         this.node.querySelector('.woot-form-element-container').innerHTML = content;
-        document.dispatchEvent(new CustomEvent('woot-popup-smth-loaded', {detail: {popup: this, content: content}}));
+        document.dispatchEvent(new CustomEvent('woot-popup-smth-loaded', { detail: { popup: this, content: content } }));
     }
 
     append_content(node) {
