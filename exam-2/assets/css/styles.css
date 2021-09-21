@@ -125,6 +125,7 @@ body > header {
 .menu_nav ul {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .menu_nav ul li {
@@ -270,7 +271,7 @@ a.btn-icon:hover svg {
 
 body > header .pureslider-nav {
   position: absolute;
-  right: 40px;
+  right: 30px;
   top: 25%;
 }
 
