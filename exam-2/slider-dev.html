@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider pure js realmag777</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="pureslider-container" id="slider1">
+            <ul class="pureslider">
+                <li>
+                    <img src="assets/img/slider/1.jpg" alt=""><br>
+                    <div>
+                        <h3>Simple and Modern</h3>
+                        <em>Quis bibendum ipsum aliquet vitae</em>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/slider/2.jpg" alt="">
+                    <div>
+                        <h3>Sed tempor</h3>
+                        <em>Vivamus ultrices quis leo at porttitor</em>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/slider/3.jpg" alt="">
+                    <div>
+                        <h3>Suspendisse potenti</h3>
+                        <em>Etiam eleifend ex mauris, at aliquam sapien placerat vitae</em>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/slider/4.jpg" alt="">
+                    <div>
+                        <h3>Quisque a magna velit</h3>
+                        <em>Nunc mattis efficitur dolor, sit amet vulputate tortor auctor feugiat</em>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/slider/5.jpg" alt="">
+                    <div>
+                        <h3>Donec porta dolor</h3>
+                        <em>Etiam ac magna finibus, lacinia justo in, mattis tellus</em>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/slider/6.jpg" alt="">
+                    <div>
+                        <h3>Fusce auctor tortor vitae</h3>
+                        <em>Maecenas elementum ultricies urna, ac lacinia odio sagittis et</em>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="pureslider-nav" data-slider="slider1"></div>
+
+
+        <br>
+        <a href="javascript: prev_slider(); void(0);">PREV</a>
+        &nbsp;|&nbsp;
+        <a href="javascript: next_slider(); void(0);">NEXT</a>
+
+        <br><br><br><br>
+
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            .pureslider-container{
+                width: 800px;
+                margin: 0 auto;
+                overflow: hidden;
+                position: relative;
+                transition: 0.7s height;
+            }
+
+            .pureslider{
+                position: relative;
+                list-style: none;
+                top: 0;
+                transition: 0.7s top;
+            }
+
+            .pureslider > li{
+                display: block;
+                position: relative;
+                width: fit-content;
+            }
+
+            .pureslider > li > div{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 40%;
+                color: #fff;
+            }
+
+            .pureslider > li img{
+                width: 100%;
+                height: auto;
+            }
+
+            .pureslider-nav a{
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+        </style>
+
+
+
+        <script>
+            var offset = 0;
+            var slider_num = 0;
+            var count_slides = document.querySelectorAll('ul.pureslider > li').length;
+            var container = document.getElementById('slider1');
+            var slider = container.querySelector('ul');
+            var slides = container.querySelectorAll('ul.pureslider > li');
+
+            document.addEventListener('DOMContentLoaded', function () {
+
+                setTimeout(function () {
+                    container.style.height = slides[0].clientHeight + 'px';
+                    generate_nav();
+                }, 111);
+
+            }, false);
+
+
+            function generate_nav() {
+                if (document.querySelector('[data-slider="slider1"]')) {
+                    let nav = document.querySelector('[data-slider="slider1"]');
+
+                    for (let i = 0; i < count_slides; i++) {
+                        let a = document.createElement('a');
+                        a.setAttribute('href', '#');
+                        a.dataset.num = i;
+                        a.textContent = i + 1;
+                        a.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            slider_num = parseInt(this.dataset.num);
+                            offset = 0;
+
+                            if (slider_num > 0) {
+                                for (let i = 0; i < slider_num; i++) {
+                                    offset += slides[i].clientHeight;
+                                }
+                            }
+
+                            slider.style.top = '-' + offset + 'px';
+                            container.style.height = slides[slider_num].clientHeight + 'px';
+
+                            return false;
+                        });
+
+                        nav.appendChild(a);
+                    }
+                }
+            }
+
+            function next_slider() {
+                slider_num++;
+
+                if (slider_num < count_slides) {
+                    let current = slides[slider_num - 1];
+                    let next = slides[slider_num];
+                    offset += current.clientHeight;
+                    slider.style.top = '-' + offset + 'px';
+                    container.style.height = next.clientHeight + 'px';
+                } else {
+                    slider_num = -1;
+                    offset = '-' + slides[0].clientHeight + 'px';
+                }
+            }
+
+            function prev_slider() {
+                slider_num--;
+
+                if (slider_num >= 0) {
+                    //let current = slides[slider_num + 1];
+                    let prev = slides[slider_num];
+                    offset -= prev.clientHeight;
+                    container.style.height = prev.clientHeight + 'px';
+                    slider.style.top = '-' + offset + 'px';
+                } else {
+                    slider_num = 0;
+                }
+            }
+
+
+        </script>
+
+
+    </body>
+</html>

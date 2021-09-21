@@ -44,7 +44,7 @@ ul {
 }
 .btn {
   display: inline-block;
-  background-color: #496bfe;
+  background-color: #296bfe;
   padding: 21px 32px 20px 32px;
   border: none;
   color: #fff;
@@ -80,7 +80,7 @@ ul {
 }
 
 .btn:hover::before {
-  background-color: #496bfe;
+  background-color: #296bfe;
   opacity: 0.95;
 }
 

@@ -1,0 +1,16 @@
+.pureslider-container {
+    overflow: hidden;
+    position: relative;
+    transition: 0.7s height;
+}
+
+.pureslider {
+    position: relative;
+    list-style: none;
+    top: 0;
+    transition: 0.7s top;
+}
+
+.pureslider>li {
+    display: block;
+}
