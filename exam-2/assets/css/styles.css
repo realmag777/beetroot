@@ -144,11 +144,6 @@ body > header {
   padding-left: 12px;
 }
 
-@media screen and (max-width: 800px) {
-  .menu_nav ul li a {
-    font-size: 0.9rem;
-  }
-}
 .menu_nav ul li a::before {
   content: "";
   display: block;
@@ -162,6 +157,20 @@ body > header {
   border-radius: 100%;
 }
 
+@media screen and (max-width: 800px) {
+  .menu_nav ul li {
+    padding: 5px 10px;
+  }
+
+  .menu_nav ul li a {
+    font-size: 0.9rem;
+    padding-left: 3px;
+  }
+
+  .menu_nav ul li a::before {
+    display: none;
+  }
+}
 .menu_nav ul li a:hover::before,
 .menu_nav ul li a.selected::before,
 .menu_nav ul li:hover a::before {
@@ -321,11 +330,6 @@ section h2::before {
   position: relative;
 }
 
-@media screen and (max-width: 800px) {
-  main {
-    overflow: hidden;
-  }
-}
 main section {
   padding-top: 100px;
 }
@@ -389,6 +393,16 @@ main section article h3 {
   margin-bottom: 25px;
 }
 
+@media screen and (max-width: 800px) {
+  main {
+    overflow: hidden;
+  }
+
+  section h2,
+main section article h3 {
+    font-size: 2rem;
+  }
+}
 .woot-modal-inner-content {
   font-family: "Open Sans";
   line-height: 2rem;
@@ -461,7 +475,8 @@ section.news h2::before {
   }
 
   .news .news-slider-nav {
-    left: 20%;
+    left: 10%;
+    bottom: 20px;
   }
 
   .news__item > a img {
