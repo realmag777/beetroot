@@ -1,5 +1,7 @@
 var menu_timer = null;
 
+
+
 window.addEventListener('load', function() {
     setInterval(function() {
         next_slider();
@@ -153,8 +155,10 @@ window.addEventListener('load', function() {
         news_slider.slide();
     }, 4000);
 
-
-    initMap();
+    //to avoid waitng google map loading delay
+    setTimeout(function() {
+        initMap();
+    }, 2000);
 
 });
 
