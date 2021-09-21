@@ -224,6 +224,12 @@ a.btn-icon:hover svg {
   .header__content {
     max-height: 400px;
   }
+
+  .socials ul a,
+.btn-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 .header__content hgroup {
   font-family: "Gotham";
