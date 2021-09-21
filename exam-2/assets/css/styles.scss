@@ -425,6 +425,7 @@ main section article h3 {
 section.news {
     background: url(../img/section-bg.jpg) repeat-x left bottom;
     position: relative;
+    overflow: hidden;
 }
 
 section.news h2 {
@@ -591,6 +592,16 @@ section#gallery .btn {
     top: 0;
 }
 
+#woot-gallery2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#woot-gallery2>div {
+    margin: 1px;
+    width: 19%;
+}
+
 @media screen and (max-width: 800px) {
     .gallery .col:first-child {
         display: none;
@@ -601,16 +612,6 @@ section#gallery .btn {
     .woot-gallery>div.woot-gallery-nav>img {
         width: 90%;
     }
-}
-
-#woot-gallery2 {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-
-#woot-gallery2>div {
-    margin: 3px;
-    width: 280px;
 }
 
 
